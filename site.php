@@ -13,6 +13,7 @@
 
       echo "There once was a man named $characterName <br>";
       echo "He was $characterAge years old <br>";
+      $characterName = "Mike";
       echo "He didn't like the name $characterName<br>";
       echo "But he did like being $characterAge<br>";
 
