@@ -45,9 +45,43 @@
       echo substr($phrase, 8);
       echo substr($phrase, 8,3);
 
+      echo 40.998 + 1;
+      echo "<br>";
+      $num = 10;
+      $num--;
+      $num += 9;
+      $num *= 2;
+      echo $num;
+        echo "<br>";
+      echo abs(-100);
+        echo "<br>";
+      echo pow(2,4); # 2^4
+        echo "<br>";
+      echo sqrt(144);
+        echo "<br>";
+      echo max(2, 10);
+        echo "<br>";
+      echo min(2, 10);
+        echo "<br>";
+      echo round(4.8);
+        echo "<br>";
+      echo ceil(7.3); #always round up
+        echo "<br>";
+      echo floor(7.8); #always round down
+          echo "<br>";
+#Get user input -set up a form
   ?>
-
-
+  <form action="site.php" method="get">
+      Name: <input type="text" name="username">
+      <!-- <input type="submit"> -->
+      <br>
+      Age: <input type="number" name="age">
+      <input type="submit">
+  </form>
+  <br>
+Your name is: <?php echo $_GET["username"] ?>
+<br>
+Your age is: <?php echo $_GET ["age"] ?>
 
 
   </body>
