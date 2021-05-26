@@ -82,6 +82,109 @@
 Your name is: <?php echo $_GET["username"] ?>
 <br>
 Your age is: <?php echo $_GET ["age"] ?>
+<hr>
+<!-- Build a basic calculator-->
+<form action="site.php" method="get">
+  Num1: <input type="number" name="num1">
+  <br>
+  Num2: <input type="number" name="num2">
+  <input type="submit">
+</form>
+
+Answer: <?php echo $_GET["num1"]+$_GET["num2"]?>
+<hr>
+<form action="site.php" method="get">
+  Num1: <input type="number" name="num3">
+  <br>
+  Num2: <input type="number" name="num4">
+  <input type="submit">
+</form>
+
+Answer: <?php echo $_GET["num3"]*$_GET["num4"]?>
+<hr>
+<!-- Build a MADLIB-->
+<form action="site.php" method="get">
+  Color: <input type="text" name="color"> <br>
+  Plural Noun: <input type="text" name="pluralNoun"> <br>
+  Celebrity: <input type="text" name="celebrity"> <br>
+  <input type="submit">
+</form>
+
+<?php
+  $color = $_GET["color"];
+  $pluralNoun = $_GET["pluralNoun"];
+  $celebrity = $_GET["celebrity"];
+ echo "Roses are $color <br>";
+ echo "$pluralNoun are blue <br>";
+ echo "I love $celebrity <br>";
+?>
+<hr>
+<!-- GET= information gets posted in the URL Parameter
+POST = info hidden in URL ie.password -->
+<form action="site.php" method="post">
+  Password: <input type="password" name="pass">
+  <input type="submit">
+</form>
+  <br>
+  Your name is: <?php echo $_POST["pass"] ?>
+<hr>
+  <!-- Arrays -->
+<?php
+  $friends = array("Kevin","Karen","Oscar","Jim");
+  echo $friends[0];
+  echo "<br>";
+  echo $friends[1] = 400;
+  echo "<br>";
+  echo $friends[4] = "Mike";
+  echo "<br>";
+  echo count($friends);
+  ?>
+
+  <!-- Checkboxes = because the user can select multiple options
+you store their info in an array, name = "fruits[]" -->
+  <hr>
+  <form action="site.php" method="post">
+    Apples: <input type="checkbox" name="fruits[]" value="apples"> <br>
+    Oranges: <input type="checkbox" name="fruits[]" value="oranges"> <br>
+    Pears: <input type="checkbox" name="fruits[]" value="pears"> <br>
+    <input type="submit">
+  </form>
+
+<?php
+  $fruits = $_POST["fruits"];
+  echo $fruits[0];
+?>
+<hr>
+<!-- Associative Arrays - key value pairs, keys must be unique -->
+<?php
+  $grades = array("Jim"=>"A+", "Pam"=>"B-","Oscar"=>"C+");
+  $grades["Jim"] = "F";
+  echo $grades["Jim"];
+  echo count($grades);
+  echo $grades[$_POST["student"]];
+?>
+<hr>
+<form action="site.php" method="post">
+  <input type="text" name="student">
+  <input type="submit">
+</form>
+
+<?php
+  $grades = array("Jim"=>"A+", "Pam"=>"B-","Oscar"=>"C+");
+  echo $grades[$_POST["student"]];
+?>
+<hr>
+  <!-- Functions = a container for code that performs a specific tag-->
+
+
+
+
+
+
+
+
+
+
 
 
   </body>
