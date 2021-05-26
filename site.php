@@ -175,13 +175,107 @@ you store their info in an array, name = "fruits[]" -->
 ?>
 <hr>
   <!-- Functions = a container for code that performs a specific tag-->
+<?php
+  function sayHi($name, $age){
+    echo "Hi $name, you are $age <br>";
+  }
+sayHi("Doug",33);
+sayHi("Steve",22);
+ ?>
+ <hr>
 
+<?php
+  function cube($num){
+    echo "Hello <br>";
+    return ($num * $num * $num);
+  }
+#no code excutes after return line
+  function wack($num){
+    return;
+  }
+  #empty return just stops a function
+$cubeResult = cube(4);
+echo $cubeResult;
 
+$wackResult = wack(2);
+echo $wackResult;
+ ?>
+<hr>
+  <!-- If Statements -->
+  I wake up
+  If I'm hungry
+    I eat breakfast
 
+  I leave my house
+  If it's cloudy
+    I bring an umbrella
+  Otherwise
+    I bring sunglasses
+<hr>
+  <?php
+  $isMale = false;
+  $isTall = false;
 
+  if($isMale && $isTall){
+    echo "You are a tall male";
+  } elseif ($isMale && !$isTall) {
+    echo "You are a short male";
+  } elseif (!$isMale && $isTall) {
+    echo "You are not male but tall";
+  }else {
+    echo "You are not male and not tall";
+  }
+  ?>
+<hr>
+<?php
+  function getMax($num1, $num2){
+    if($num1 > $num2){
+      return $num1;
+    } else {
+      return $num2;
+    }
+  }
 
+echo getMax(3,90);
+?>
+<hr>
+<?php
+#this is mine, it's kinda long winded/ not sure if fully correct
+function getMax3($num1,$num2,$num3){
+  if ($num1 > $num2 && $num2 > $num3 || $num1 > $num2 && $num3 > $num2) {
+    return $num1;
+  } elseif ($num2 > $num1 && $num1 > $num3 || $num2 > $num1 && $num3 > $num1) {
+    return $num2;
+  }elseif ($num3 > $num2 && $num2 > $num1 || $num3 > $num2 && $num2 > $num1) {
+    return $num3;
+  } else {
+  return "Error, please try again";
+  }
+}
+echo getMax3(31.3,31.1,31.2);
+ ?>
+<hr>
 
+<?php
+#($num3 >= $num1 && $num3 >= $num2)
+ function getMax3Tut($num1,$num2,$num3) {
+   if ($num1 >= $num2 && $num1 >= $num3) {
+     return $num1;
+   } elseif ($num2 >= $num1 && $num2 >= $num3) {
+     return $num2;
+   } else {
+     return $num3;
+   }
+ }
 
+echo getMax3Tut(3.1,3.2,3.0);
+ ?>
+
+  <!-- Create 4 Function calculator -->
+<form action="site.php" method="post">
+<input type="text" name="" value="">
+<input type="submit"
+</form>
 
 
 
