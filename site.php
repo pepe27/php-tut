@@ -366,9 +366,148 @@ for ($i = 0; $i < count($luckyNumbers); $i++) {
   echo "$luckyNumbers[$i] <br>";
 }
 
+//DOMComment
+/* multi
+lines of comments
+*/
+#comment
+ ?>
 
+<!-- Include in HTML
+Useful for updating all websites, just change the header.html
+instead of individual pages. Use "include" keyword in php to join html pages
+Break up website into reusable components, ie. header, footer, navigation list
+Makes website more modular -->
 
+<?php include "header.html" ?>
+<p> Hello World <p>
+<?php include "footer.html" ?>
 
+<!-- Includes in PHP -->
+
+<?php
+#Define value of variables here, instead of in article-header.php
+  $title = "My First Post";
+  $author ="Mimi";
+  $wordCount = 400;
+  include "article-header.php";
+ ?>
+
+<hr>
+
+<?php
+#able to use functions & variables from the useful-tools.php file
+  include "useful-tools.php";
+  echo $feetInMile;
+  sayHello("Mike");
+?>
+<hr>
+
+<!-- Objects, a lot of things in the real world can't be represent
+everything with a single string, boolean, or number -->
+<?php
+#1. create a Class, template of a Book + Constructor function
+  class Book {
+    var $title;
+    var $author;
+    var $pages;
+    # "$this" is a keyword refering to
+    function __construct($aTitle, $aAuthor, $aPages){
+      $this->title=$aTitle;
+      $this->author=$aAuthor;
+      $this->pages=$aPages;
+    }
+  }
+
+#2. create Objects(below), are an instance of a Class
+#Created with the constructor function above
+#still able to change the values, seen in 2nd line below
+$book1 = new Book("Harry Potter","JK Rowling",400);
+$book1 -> title = "Hunger Games";
+$book2 = new Book("Lord of the Rings", "Tolkein", 700);
+
+echo $book1->title;
+echo $book2->pages;
+ ?>
+<hr>
+ <!-- Make Object Functions -->
+<?php
+class Student {
+  var $name;
+  var $major;
+  var $gpa;
+  function __construct($name,$major, $gpa){
+    $this-> name = $name;
+    $this-> major = $major;
+    $this-> gpa = $gpa;
+  }
+    function hasHonors(){
+      if ($this -> gpa >= 3.5){
+        return "Honors roll";
+      } else {
+        return "No Honors";
+      }
+    }
+}
+
+$stud1 = new Student("Jim","Business",2.6);
+$stud2 = new Student("Pam","Art",3.6);
+
+echo $stud1->name;
+echo $stud1->hasHonors();
+echo "<hr>";
+echo $stud2->hasHonors();
+?>
+<hr>
+<!-- Getters and Setters-->
+<?php
+class Movie{
+  //Visibility Modifer "public"/var = means attribute open to everybody
+  //"private" = only code inside the class that it's declared is able to use
+  public $title;
+  private $rating;
+  function __construct($title,$rating){
+    $this->title = $title;
+    $this->rating = $rating;
+  }
+  #make a function to get the rating, even though the rating is private
+  function getRating(){
+    return $this->rating;
+  }
+//make a function that can set rating, with limiitations by If Statement
+//setting the attribute to private, and create a getter fn
+//and setter fn (to filters out non - ratings)
+  function setRating($rating){
+    if($rating =="G" || $rating =="PG" || $rating =="PG-13" || $rating =="R" || $rating =="NR"){
+      $this->rating = $rating;
+    } else{
+      $this->rating="NR";
+    }
+  }
+}
+$avengers = new Movie("Avengers","PG-13");
+    //G, PG, PG-13, R, NR
+    //You want to limit the ratings to only valid values
+$avengers-> setRating("dog");
+echo $avengers-> getRating();
+ ?>
+
+<!-- Inheritance -->
+<?php
+class Chef {
+  function makeChicken(){
+    echo "The chef makes chicken <br>";
+  }
+  function makeSalad(){
+    echo "The chef makes salad <br>";
+  }
+  function makeSpecialDish(){
+    echo "The chef makes bbq ribs <br>";
+  }
+}
+
+$chef = new Chef;
+$chef->makeChicken();
 
 
  ?>
@@ -380,17 +519,4 @@ for ($i = 0; $i < count($luckyNumbers); $i++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  </body>
 </html>
