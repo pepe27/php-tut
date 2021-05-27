@@ -270,12 +270,62 @@ echo getMax3(31.3,31.1,31.2);
 
 echo getMax3Tut(3.1,3.2,3.0);
  ?>
-
-  <!-- Create 4 Function calculator -->
+<hr>
+  <!-- Create Multi-Functional Calculator -->
 <form action="site.php" method="post">
-<input type="text" name="" value="">
-<input type="submit"
+First Number: <input type="number" step = "0.001" name="num1"> <br>
+Operater: <input type="text" name="op"> <br>
+Second Number: <input type="number" step = "0.001" name="num2"> <br>
+
+<input type="submit">
 </form>
+
+<?php
+$num1 = $_POST["num1"];
+$num2 = $_POST["num2"];
+$op = $_POST["op"];
+
+if ($op == "+"){
+  echo $num1 + $num2;
+}elseif ($op == "-") {
+  echo $num1 - $num2;
+}elseif ($op == "*") {
+  echo $num1 * $num2;
+}elseif ($op == "/") {
+  echo $num1 / $num2;
+} elseif ($op == "%") {
+    echo $num1 % $num2;
+} elseif ($op == "^" || $op == "**") {
+    echo $num1 ** $num2;
+}else {
+  echo "Invalid Operator";
+}
+ ?>
+<hr>
+
+<!-- Switch Statements -->
+<form action="site.php" method="post">
+  What was your grade? <input type="text" name=""> <br>
+  <input type="submit">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
