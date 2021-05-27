@@ -491,10 +491,12 @@ $avengers = new Movie("Avengers","PG-13");
 $avengers-> setRating("dog");
 echo $avengers-> getRating();
  ?>
+<hr>
 
 <!-- Inheritance -->
 <?php
 class Chef {
+
   function makeChicken(){
     echo "The chef makes chicken <br>";
   }
@@ -506,11 +508,38 @@ class Chef {
   }
 }
 
+class ItalianChef extends Chef {
+  function makePasta(){
+    echo "The chef makes pasta<br>";
+  }
+  function makeSpecialDish(){
+    echo "The chef makes chicken parm";
+  }
+}
+
+
 $chef = new Chef;
 $chef->makeChicken();
 
 
+$italianchef = new ItalianChef;
+$italianchef ->makeChicken();
+$italianchef ->makePasta();
+# $chef->makePasta(); this would throw error, regular chef can't make pasta
+
+
+$chef ->makeSpecialDish();
+$italianchef ->makeSpecialDish();
  ?>
+
+
+
+
+
+
+
+
+
 
 
 
