@@ -305,12 +305,73 @@ if ($op == "+"){
 
 <!-- Switch Statements -->
 <form action="site.php" method="post">
-  What was your grade? <input type="text" name=""> <br>
+  What was your grade? <input type="text" name="grade"> <br>
   <input type="submit">
-
 </form>
 
+<?php
+$grade = $_POST["grade"];
+#echo $grade;
 
+switch($grade){
+  case "A":
+    echo "You did amazing!";
+    break;
+  case "B":
+    echo "You did pretty good";
+    break;
+  case "C":
+    echo "You did poorly";
+    break;
+  case "F":
+    echo "YOU FAIL";
+    break;
+  default:
+    echo "Invalid grade";
+    break;
+}
+ ?>
+<hr>
+<!-- While Loops -Don't forget the $index++, otherwise infinite loop-->
+<?php
+  $index = 1;
+  while ($index <= 5) {
+    echo "$index <br>";
+    $index++;
+  }
+echo "<hr>";
+ ?>
+
+<!-- Do While Loops = excutes the loop body then checks the condition-->
+<?php
+$index = 6;
+do {
+  echo "$index <br>";
+  $index++;
+} while ($index <= 5)
+ ?>
+
+<!-- For Loops = keep track of incrementing variable-->
+<?php
+$index = 1;
+while ($index <= 5) {
+  echo "$index <br>";
+  $index++;
+}
+
+echo "<hr>";
+
+$luckyNumbers = [11,21,31,41,51];
+for ($i = 0; $i < count($luckyNumbers); $i++) {
+  echo "$luckyNumbers[$i] <br>";
+}
+
+
+
+
+
+
+ ?>
 
 
 
