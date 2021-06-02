@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- these are the most common meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Your Description, 160char is good">
+    <meta name="author" content="Mimi">
+    <meta name="keywords" content="HTML, Tutorial, Giraffe Academy">
+    <!-- this line define look for mobile view-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+</head>
+<body>
+  <header>
+<nav>
+  <button type="button" name="button"> About Me</button>
+</nav>
+    <h2>Mimi's Website</h2>
+    <hr/> <hr/>
+</header>
+
+<main  style="background-color:azure">
+
+<article>
+  <section style="background-color:pink">
+    <h3 style="color:blue; background-color:bisque">Using Headers inside HTML Documents</h3>
+H1 (only one)
+ H2
+    H3
+ H2
+  </section>
+  <aside name="not core content">
+    Ad goes here
+  </aside>
+  <section>
+    <h3>section 2 -  Using Links/Images/Videos in HTML</h3>
+    <!-- target="_blank" opens link on a new tab-->
+    <a href="https://google.com" target="_blank"><h1><b>Google Me</b></h1></a>
+    <a href="page2.html" target="_blank"><h1><b>Page 2</b></h1></a>
+    <a href="page1.html" target="_blank"><h1><b>Page 1</b></h1></a>
+    <a href="dir1/page3.html">Page 3</a>
+
+    <!-- Imbedded an image through click-through of another image-->
+    <a href="hamster.jpg">hamster
+    <img width="150"src="https://1.bp.blogspot.com/-sM1tlaOjIHI/T-eMieYlPMI/AAAAAAAAGno/jnSLdZW8aJg/s1600/20120624_1100.jpg" alt="duck">
+    </a>
+
+    <img width="150"height="150" src="hamster.jpg" alt="hamster">
+
+    <!-- must add "constrols" otherwise video won't play, can use "loop" and/or "autoplay" -->
+    <video src="video.mkv" poster="hamster.jpg" controls width="300">
+    this text displays if browser is unable to play type of video
+    </video>
+
+    <!-- Put a youtube video on your website, copy the embed code -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+     allowfullscreen></iframe>
+
+     <!-- copied an embed TikTok code -->
+     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@arrynskelly/video/6963390103246916869" data-video-id="6963390103246916869" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@arrynskelly" href="https://www.tiktok.com/@arrynskelly">@arrynskelly</a> <p>Day 56 of feeding my pet seagull - Today steven was the best behaved i’ve ever seen! He drank and ate soo politely 🥺  <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou">#foryou</a> <a title="seagull" target="_blank" href="https://www.tiktok.com/tag/seagull">#seagull</a> <a title="bird" target="_blank" href="https://www.tiktok.com/tag/bird">#bird</a></p> <a target="_blank" title="♬ original sound - arrynskelly" href="https://www.tiktok.com/music/original-sound-6963389993221917445">♬ original sound - arrynskelly</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+
+      <!-- Ordered list type="A, I, N" vs UnOrdered list <ul> -->
+     <ol type="N" >
+       <li> <a href="#">Apples</a> </li>
+       <li>Oranges</li>
+       <li>Bananas</li>
+     </ol>
+
+     <!-- description list-->
+     <dl class="">
+       <dt>Apples</dt>
+       <dd>-They are red</dd>
+       <dt>Mimi</dt>
+       <dd>Hey, that's me!</dd>
+       <dt>Dry Throat</dt>
+     </dl>
+
+     <!-- create tables-->
+     <table>
+      <caption><h3>List of Numbers</h3></caption>
+      <thead>
+        <tr>
+          <th>num1</th>
+          <th>num2</th>
+          <th>num3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">one</td>
+          <td>two</td>
+          <td>three</td>
+          <td>three and a half</td>
+        </tr>
+        <tr>
+          <td>four</td>
+          <td>five</td>
+          <td>six</td>
+        </tr>
+      </tbody>
+     </table>
+
+<!-- inline vs block elements (spans vs divs)-->
+    <a href="#">Link1</a>
+    <a href="#">Link2</a>
+    <br>
+    <p>Para1</p>
+    <p>Para2</p>
+<hr>
+    <span>span1</span>
+    <span>span2</span>
+<br>
+  <div class="">div1</div>
+  <div class="">div2</div>
+<hr>
+  <!-- textboxes and form(acts as a wrapper for inputs)-->
+
+<form class="" action="index.html" method="post">
+
+<input type="text" value="Enter your username"> <br>
+<input type="password" value="Enter your password"> <br>
+<button type="button" name="button">Click Me</button> <br>
+<input type="date"> <br>
+<input type="range"> <br>
+<input type="email"> <br>
+<input type="file"> <br>
+<hr>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<hr>
+<!-- If radio buttons have the same name,
+ only one can be clicked at a time-->
+<input name="btn"type="radio"/>
+<input name="btn"type="radio"/>
+
+<textarea name="name" rows="10" cols="100"></textarea>
+</form>
+  </section>
+</article>
+    <p><big>Hello</big> Little Big World, this <b><i>is</b></i>
+      my <small>paragraph</small></p>
+      <br>
+    <p>10<sup>3</sup></p>
+    H<sub>2</sub>O
+
+<!-- Iframe, embedd another website on yours, many sites won't let you, ie. Amazon-->
+<iframe src="http://giraffeacademy.com/" frameborder="0" width="1000" height="800">
+  This code is displayed if user's browser doesn't support iframe</iframe>
+
+  <iframe src="http://mimixuan.com/" frameborder="0" width="1000" height="800">
+    This code is displayed if user's browser doesn't support iframe</iframe>
+
+<hr>
+<!-- Quotations-->
+<blockquote cite="http://http.//traversymedia.com">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</blockquote>
+
+<p>The <abbr title="World Wide Web">WWW</abbr> is awesome</p>
+
+</main>
+
+<footer>
+</footer>
+
+</body>
+</html>
